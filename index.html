@@ -12,6 +12,10 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #05030a;
       color: #f5f5f5;
@@ -191,6 +195,13 @@
       margin-bottom: 14px;
     }
 
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -204,6 +215,8 @@
       overflow: hidden;
       transition: 0.3s;
       box-shadow: 0 0 30px rgba(124,58,237,0.08);
+      display: flex;
+      flex-direction: column;
     }
 
     .project-card:hover {
@@ -220,6 +233,9 @@
 
     .project-content {
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .project-content h3 {
@@ -252,6 +268,7 @@
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
+      margin-top: auto;
     }
 
     .project-links a {
@@ -309,7 +326,8 @@
 
     @media (max-width: 960px) {
       .hero-content,
-      .projects-grid {
+      .projects-grid,
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
@@ -339,6 +357,10 @@
 
       .section-title {
         font-size: 1.8rem;
+      }
+
+      .project-links a {
+        flex: 100%;
       }
     }
   </style>
@@ -386,27 +408,28 @@
         Um pouco sobre minha trajetória, estudos e direção profissional.
       </p>
 
-   <div class="about-box about-grid">
-  <div>
-    <p>
-      Estou em transição para a área de tecnologia e atualmente curso Análise e Desenvolvimento de Sistemas. Venho de uma experiência de mais de seis anos na área administrativa, onde atuei com organização de dados, controle de processos e atendimento ao cliente.
-    </p>
+      <div class="about-box about-grid">
+        <div>
+          <p>
+            Estou em transição para a área de tecnologia e atualmente curso Análise e Desenvolvimento de Sistemas. Venho de uma experiência de mais de seis anos na área administrativa, onde atuei com organização de dados, controle de processos e atendimento ao cliente.
+          </p>
 
-    <p>
-      Desenvolvi responsabilidade, organização e atenção aos detalhes, habilidades que hoje aplico também nos estudos e projetos em tecnologia.
-    </p>
-  </div>
+          <p>
+            Desenvolvi responsabilidade, organização e atenção aos detalhes, habilidades que hoje aplico também nos estudos e projetos em tecnologia.
+          </p>
+        </div>
 
-  <div>
-    <p>
-      Atualmente, estou focada em aprender programação e entender como a tecnologia funciona na prática. Tenho estudado lógica de programação, Python, SQL e banco de dados.
-    </p>
+        <div>
+          <p>
+            Atualmente, estou focada em aprender programação e entender como a tecnologia funciona na prática. Tenho estudado lógica de programação, Python, SQL e banco de dados.
+          </p>
 
-    <p>
-      Ainda estou no início da minha jornada em TI, mas tenho grande motivação para crescer, aprender continuamente e conquistar minha primeira oportunidade como estagiária.
-    </p>
-  </div>
-</div>
+          <p>
+            Ainda estou no início da minha jornada em TI, mas tenho grande motivação para crescer, aprender continuamente e conquistar minha primeira oportunidade como estagiária.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="projetos">
@@ -418,7 +441,7 @@
 
       <div class="projects-grid">
         <div class="project-card">
-          <img src="https://raw.githubusercontent.com/gabivsilva/clinica-inteligente/main/frontend/public/images/login.png.jpeg" alt="Projeto MedAgenda" />
+          <img src="https://raw.githubusercontent.com/gabivsilva/clinica-inteligente/main/public/images/login.png" alt="Projeto MedAgenda" />
           <div class="project-content">
             <h3>MedAgenda - Sistema de Clínica</h3>
             <p>
@@ -461,7 +484,7 @@
           <div class="project-content">
             <h3>Projeto futuro</h3>
             <p>
-              Outro espaço preparado para receber mais projetos, deixando seu portfólio organizado e consistente.
+              Outro espaço preparado para receber mais projetos, deixando meu portfólio organizado e consistente.
             </p>
             <div class="tags">
               <span class="tag">Front-end</span>
