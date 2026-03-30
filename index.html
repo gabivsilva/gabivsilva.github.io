@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gabriella Ferreira | Portfólio</title>
+
   <style>
     * {
       margin: 0;
@@ -12,511 +13,263 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       background: #05030a;
       color: #f5f5f5;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
     }
 
     .container {
-      width: min(1120px, 90%);
-      margin: 0 auto;
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(5, 3, 10, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
     }
 
     .logo {
-      font-size: 1.4rem;
-      font-weight: 700;
       color: #c084fc;
+      font-weight: bold;
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       list-style: none;
     }
 
-    .nav-links a {
-      color: #d4d4d8;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #c084fc;
-    }
-
     .hero {
-      padding: 90px 0 70px;
-      background:
-        radial-gradient(circle at top left, rgba(139,92,246,0.25), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(217,70,239,0.15), transparent 28%),
-        linear-gradient(135deg, #120a22 0%, #090511 45%, #05030a 100%);
-    }
-
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-block;
-      margin-bottom: 18px;
-      padding: 10px 18px;
-      border: 1px solid rgba(192,132,252,0.25);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      color: #d8b4fe;
-      font-size: 0.9rem;
-    }
-
-    .hero h1 {
-      font-size: 3.4rem;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 span {
-      color: #c084fc;
-    }
-
-    .hero p {
-      color: #d4d4d8;
-      font-size: 1.05rem;
-      max-width: 620px;
-      margin-bottom: 28px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 24px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-
-    .btn-primary {
-      background: linear-gradient(90deg, #7c3aed, #d946ef);
-      color: white;
-      box-shadow: 0 10px 25px rgba(124,58,237,0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.08);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(192,132,252,0.25);
-      background: rgba(255,255,255,0.04);
-      color: #e4e4e7;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(124,58,237,0.12);
-    }
-
-    .hero-card {
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.05);
-      border-radius: 28px;
-      padding: 24px;
-      box-shadow: 0 0 40px rgba(124,58,237,0.12);
-    }
-
-    .hero-card h3 {
-      margin-bottom: 10px;
-      color: #f5f5f5;
-    }
-
-    .hero-card p {
-      margin-bottom: 0;
-      font-size: 0.95rem;
-      color: #d4d4d8;
-    }
-
-    section {
       padding: 80px 0;
     }
 
-    .section-title {
-      font-size: 2.2rem;
-      margin-bottom: 12px;
+    .hero h1 {
+      font-size: 3rem;
     }
 
-    .section-subtitle {
-      color: #a1a1aa;
-      max-width: 700px;
-      margin-bottom: 36px;
+    .hero span {
+      color: #c084fc;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg,#7c3aed,#a855f7);
+      color: white;
+    }
+
+    section {
+      padding: 60px 0;
     }
 
     .about-box {
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.04);
-      border-radius: 28px;
-      padding: 28px;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 20px;
     }
 
-    .about-box p {
-      color: #d4d4d8;
-      margin-bottom: 14px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: start;
-    }
+    /* PROJETOS */
 
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 20px;
     }
 
     .project-card {
-      border: 1px solid rgba(255,255,255,0.08);
       background: #0b0714;
-      border-radius: 24px;
+      border-radius: 20px;
       padding: 20px;
-      transition: 0.3s;
-      box-shadow: 0 0 30px rgba(124,58,237,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
       display: flex;
       flex-direction: column;
-      min-height: 280px;
     }
 
     .project-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(192,132,252,0.28);
+      transform: translateY(-5px);
+      transition: 0.3s;
     }
 
     .project-content {
       display: flex;
       flex-direction: column;
-      flex: 1;
+      height: 100%;
     }
 
     .project-content h3 {
-      font-size: 1.25rem;
       margin-bottom: 10px;
-      color: #f5f5f5;
     }
 
     .project-content p {
       color: #c4c4cc;
-      font-size: 0.95rem;
-      margin-bottom: 16px;
+      margin-bottom: 15px;
     }
 
     .tags {
       display: flex;
+      gap: 8px;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
     .tag {
-      padding: 8px 12px;
-      border: 1px solid rgba(192,132,252,0.28);
-      border-radius: 999px;
-      color: #d8b4fe;
-      font-size: 0.82rem;
+      padding: 5px 10px;
+      border: 1px solid #c084fc;
+      border-radius: 20px;
+      font-size: 12px;
     }
 
     .project-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
       margin-top: auto;
+      display: flex;
+      gap: 10px;
     }
 
     .project-links a {
       flex: 1;
       text-align: center;
-      padding: 12px 16px;
-      border-radius: 12px;
-      font-weight: 700;
+      padding: 10px;
+      border-radius: 10px;
     }
 
     .link-primary {
-      background: linear-gradient(90deg, #7c3aed, #a855f7);
-      color: white;
+      background: linear-gradient(90deg,#7c3aed,#a855f7);
     }
 
     .link-secondary {
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #e4e4e7;
-      background: rgba(255,255,255,0.03);
-    }
-
-    .contact-box {
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.04);
-      border-radius: 28px;
-      padding: 28px;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 20px;
-    }
-
-    .contact-links a {
-      padding: 14px 18px;
-      border-radius: 14px;
-      border: 1px solid rgba(192,132,252,0.25);
-      background: rgba(255,255,255,0.04);
-      color: #f5f5f5;
-      transition: 0.3s;
-    }
-
-    .contact-links a:hover {
-      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
     }
 
     footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 24px 0;
-      color: #a1a1aa;
       text-align: center;
+      padding: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
 
-    @media (max-width: 960px) {
-      .hero-content,
-      .projects-grid,
-      .about-grid {
+    @media(max-width: 900px) {
+      .projects-grid {
         grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 2.6rem;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav {
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .hero {
-        padding-top: 70px;
-      }
-
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .section-title {
-        font-size: 1.8rem;
-      }
-
-      .project-links a {
-        flex: 100%;
       }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">Gabriella Ferreira</div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </div>
-  </header>
 
-  <section class="hero" id="inicio">
-    <div class="container hero-content">
-      <div>
-        <span class="badge">Portfólio de Desenvolvimento</span>
-        <h1>Olá, eu sou <span>Gabriella</span>.</h1>
-        <p>
-          Estudante de Análise e Desenvolvimento de Sistemas, construindo projetos com foco em interfaces modernas, organização visual e experiência do usuário.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
-          <a href="https://www.linkedin.com/in/gabriella-ferreira-9b0019307" target="_blank" class="btn btn-secondary">LinkedIn</a>
-        </div>
-      </div>
+<header>
+  <div class="container nav">
+    <div class="logo">Gabriella Ferreira</div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+    </ul>
+  </div>
+</header>
 
-      <div class="hero-card">
-        <h3>Objetivo profissional</h3>
-        <p>
-          Busco oportunidade de estágio na área de tecnologia para desenvolver minhas habilidades em front-end, back-end e construção de sistemas completos.
-        </p>
-      </div>
-    </div>
-  </section>
+<section class="hero">
+  <div class="container">
+    <h1>Olá, eu sou <span>Gabriella</span></h1>
+    <p>Estudante de ADS em transição para tecnologia.</p>
+    <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+  </div>
+</section>
 
-  <section id="sobre">
-    <div class="container">
-      <h2 class="section-title">Sobre mim</h2>
-      <p class="section-subtitle">
-        Um pouco sobre minha trajetória, estudos e direção profissional.
+<section id="sobre">
+  <div class="container">
+    <h2>Sobre mim</h2>
+    <div class="about-box">
+      <p>
+        Estou em transição para a área de tecnologia e atualmente curso Análise e Desenvolvimento de Sistemas.
+        Venho de uma experiência de mais de seis anos na área administrativa.
       </p>
 
-      <div class="about-box about-grid">
-        <div>
-          <p>
-            Estou em transição para a área de tecnologia e atualmente curso Análise e Desenvolvimento de Sistemas. Venho de uma experiência de mais de seis anos na área administrativa, onde atuei com organização de dados, controle de processos e atendimento ao cliente.
-          </p>
-
-          <p>
-            Desenvolvi responsabilidade, organização e atenção aos detalhes, habilidades que hoje aplico também nos estudos e projetos em tecnologia.
-          </p>
-        </div>
-
-        <div>
-          <p>
-            Atualmente, estou focada em aprender programação e entender como a tecnologia funciona na prática. Tenho estudado lógica de programação, Python, SQL e banco de dados.
-          </p>
-
-          <p>
-            Ainda estou no início da minha jornada em TI, mas tenho grande motivação para crescer, aprender continuamente e conquistar minha primeira oportunidade como estagiária.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projetos">
-    <div class="container">
-      <h2 class="section-title">Meus Projetos</h2>
-      <p class="section-subtitle">
-        Alguns dos projetos que venho desenvolvendo para prática, aprendizado e construção de portfólio.
+      <p>
+        Hoje estou focada em aprender programação, estudando lógica, Python, SQL e banco de dados.
       </p>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-content">
-            <h3>🏥 MedAgenda - Sistema de Clínica</h3>
-            <p>
-              Sistema inteligente para agendamento de consultas médicas com login, cadastro, dashboard e interface moderna em tema dark.
-            </p>
-            <div class="tags">
-              <span class="tag">Vue.js</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">API</span>
-            </div>
-            <div class="project-links">
-              <a class="link-primary" href="https://github.com/gabivsilva/clinica-inteligente" target="_blank">Ver projeto</a>
-              <a class="link-secondary" href="https://github.com/gabivsilva/clinica-inteligente" target="_blank">Código</a>
-            </div>
-          </div>
-        </div>
+      <p>
+        Busco minha primeira oportunidade como estagiária em tecnologia.
+      </p>
+    </div>
+  </div>
+</section>
 
-        <div class="project-card">
-          <div class="project-content">
-            <h3>💻 Projeto em desenvolvimento</h3>
-            <p>
-              Espaço reservado para os próximos projetos que farão parte do meu portfólio, mantendo a mesma identidade visual.
-            </p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-              <a class="link-primary" href="#">Em breve</a>
-              <a class="link-secondary" href="#">Detalhes</a>
-            </div>
-          </div>
-        </div>
+<section id="projetos">
+  <div class="container">
+    <h2>Projetos</h2>
 
-        <div class="project-card">
-          <div class="project-content">
-            <h3>✨ Projeto futuro</h3>
-            <p>
-              Outro espaço preparado para receber mais projetos, deixando meu portfólio organizado e consistente.
-            </p>
-            <div class="tags">
-              <span class="tag">Front-end</span>
-              <span class="tag">UI</span>
-              <span class="tag">Web</span>
-            </div>
-            <div class="project-links">
-              <a class="link-primary" href="#">Em breve</a>
-              <a class="link-secondary" href="#">Detalhes</a>
-            </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-content">
+          <h3>🏥 MedAgenda</h3>
+          <p>Sistema de agendamento de consultas com login, dashboard e API.</p>
+
+          <div class="tags">
+            <span class="tag">Vue</span>
+            <span class="tag">TS</span>
+            <span class="tag">Node</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/gabivsilva/clinica-inteligente" class="link-primary">Ver</a>
+            <a href="https://github.com/gabivsilva/clinica-inteligente" class="link-secondary">Código</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="contato">
-    <div class="container">
-      <h2 class="section-title">Contato</h2>
-      <p class="section-subtitle">
-        Você pode me encontrar pelos canais abaixo.
-      </p>
+      <div class="project-card">
+        <div class="project-content">
+          <h3>💻 Em desenvolvimento</h3>
+          <p>Próximos projetos do portfólio.</p>
 
-      <div class="contact-box">
-        <p>
-          Estou em busca de oportunidades para desenvolver minhas habilidades e construir uma trajetória sólida na área de tecnologia.
-        </p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
 
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/gabriella-ferreira-9b0019307" target="_blank">LinkedIn</a>
-          <a href="https://github.com/gabivsilva" target="_blank">GitHub</a>
-          <a href="mailto:gabivsllva@gmail.com">E-mail</a>
+          <div class="project-links">
+            <a href="#" class="link-primary">Em breve</a>
+            <a href="#" class="link-secondary">Detalhes</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2026 Gabriella Ferreira. Todos os direitos reservados.</p>
+      <div class="project-card">
+        <div class="project-content">
+          <h3>✨ Futuro</h3>
+          <p>Mais projetos em breve.</p>
+
+          <div class="tags">
+            <span class="tag">Web</span>
+          </div>
+
+          <div class="project-links">
+            <a href="#" class="link-primary">Em breve</a>
+            <a href="#" class="link-secondary">Detalhes</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </footer>
+  </div>
+</section>
+
+<footer>
+  <p>© Gabriella Ferreira</p>
+</footer>
+
 </body>
 </html>
