@@ -36,7 +36,7 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(5, 3, 10, 0.9);
+      background: rgba(5, 3, 10, 0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
@@ -212,11 +212,12 @@
       border: 1px solid rgba(255,255,255,0.08);
       background: #0b0714;
       border-radius: 24px;
-      overflow: hidden;
+      padding: 20px;
       transition: 0.3s;
       box-shadow: 0 0 30px rgba(124,58,237,0.08);
       display: flex;
       flex-direction: column;
+      min-height: 280px;
     }
 
     .project-card:hover {
@@ -224,15 +225,7 @@
       border-color: rgba(192,132,252,0.28);
     }
 
-    .project-card img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      display: block;
-    }
-
     .project-content {
-      padding: 20px;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -241,6 +234,7 @@
     .project-content h3 {
       font-size: 1.25rem;
       margin-bottom: 10px;
+      color: #f5f5f5;
     }
 
     .project-content p {
@@ -441,8 +435,8 @@
 
       <div class="projects-grid">
         <div class="project-card">
-          <img src=https://raw.githubusercontent.com/gabivsilva/clinica-inteligente/main/frontend/public/images/login.png
-            <h3>MedAgenda - Sistema de Clínica</h3>
+          <div class="project-content">
+            <h3>🏥 MedAgenda - Sistema de Clínica</h3>
             <p>
               Sistema inteligente para agendamento de consultas médicas com login, cadastro, dashboard e interface moderna em tema dark.
             </p>
@@ -460,9 +454,8 @@
         </div>
 
         <div class="project-card">
-          <img src="https://via.placeholder.com/600x400/1a1028/c084fc?text=Novo+Projeto" alt="Projeto futuro" />
           <div class="project-content">
-            <h3>Projeto em desenvolvimento</h3>
+            <h3>💻 Projeto em desenvolvimento</h3>
             <p>
               Espaço reservado para os próximos projetos que farão parte do meu portfólio, mantendo a mesma identidade visual.
             </p>
@@ -472,16 +465,15 @@
               <span class="tag">JavaScript</span>
             </div>
             <div class="project-links">
-              <a class="link-primary" href="#" target="_blank">Em breve</a>
-              <a class="link-secondary" href="#" target="_blank">Detalhes</a>
+              <a class="link-primary" href="#">Em breve</a>
+              <a class="link-secondary" href="#">Detalhes</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="https://via.placeholder.com/600x400/1a1028/c084fc?text=Novo+Projeto" alt="Projeto futuro" />
           <div class="project-content">
-            <h3>Projeto futuro</h3>
+            <h3>✨ Projeto futuro</h3>
             <p>
               Outro espaço preparado para receber mais projetos, deixando meu portfólio organizado e consistente.
             </p>
@@ -491,8 +483,8 @@
               <span class="tag">Web</span>
             </div>
             <div class="project-links">
-              <a class="link-primary" href="#" target="_blank">Em breve</a>
-              <a class="link-secondary" href="#" target="_blank">Detalhes</a>
+              <a class="link-primary" href="#">Em breve</a>
+              <a class="link-secondary" href="#">Detalhes</a>
             </div>
           </div>
         </div>
